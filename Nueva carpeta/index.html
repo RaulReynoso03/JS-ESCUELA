@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Operaciones Básicas</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Operaciones Básicas</h1>
+			<p>Ingresa dos números válidos:</p>
+			<input type="number" id="n1" placeholder="Número 1" />
+			<input type="number" id="n2" placeholder="Número 2" />
+			<br />
+			<button onclick="op('+')">Suma</button>
+			<button onclick="op('-')">Resta</button>
+			<button onclick="op('*')">Multiplicación</button>
+			<button onclick="op('/')">División</button>
+			<p id="r"></p>
+		</div>
+
+		<script>
+			function op(operacion) {
+				const num1 = parseFloat(document.getElementById("n1").value);
+				const num2 = parseFloat(document.getElementById("n2").value);
+				let resultado;
+
+				if (operacion === "/" && num2 === 0) {
+					alert("No se puede dividir por cero.");
+					return;
+				}
+
+				switch (operacion) {
+					case "+":
+						resultado = num1 + num2;
+						break;
+					case "-":
+						resultado = num1 - num2;
+						break;
+					case "*":
+						resultado = num1 * num2;
+						break;
+					case "/":
+						resultado = num1 / num2;
+						break;
+					default:
+						alert("Operación no válida.");
+						return;
+				}
+
+				document.getElementById("r").innerHTML = "Resultado: " + resultado;
+			}
+		</script>
+	</body>
+</html>
