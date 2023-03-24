@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Juego de Dados</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Juego de Dados</h1>
+  <div class="dice" id="dice-player1" onclick="rollDice(1)">
+    <span class="dice-result" id="dice-result-player1"></span>
+  </div>
+  <p>Puntuación Jugador 1: <span id="score-player1">0</span></p>
+  <p>Última tirada Jugador 1: <span id="last-roll-player1"></span></p>
+  <p>Bonificación Jugador 1: <span id="bonus-player1">0</span></p>
+  <p>Penalización Jugador 1: <span id="penalty-player1">0</span></p>
+
+  <div class="dice" id="dice-player2" onclick="rollDice(2)">
+    <span class="dice-result" id="dice-result-player2"></span>
+  </div>
+  <p>Puntuación Jugador 2: <span id="score-player2">0</span></p>
+  <p>Última tirada Jugador 2: <span id="last-roll-player2"></span></p>
+  <p>Bonificación Jugador 2: <span id="bonus-player2">0</span></p>
+  <p>Penalización Jugador 2: <span id="penalty-player2">0</span></p>
+
+  <p>Mínimo para ganar: <span id="min-score-to-win">20</span></p>
+
+  <button id="reset-btn" onclick="resetGame()">Reiniciar</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
